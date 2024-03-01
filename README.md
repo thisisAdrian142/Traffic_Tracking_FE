@@ -26,4 +26,4 @@ Back-end:
 
 ## Future 🔮
 
-Might add Leetcode questions of topic recursion into the webpage.
+Will extend the scale of the application.
