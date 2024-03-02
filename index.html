@@ -1,88 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Traffic Tracking</title>
+    <title>SydNav:Your Ultimate traffic Companion</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- ... other head elements ... -->
-    <!-- Include jQuery first -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Then include the typeahead library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script>
-    <!-- Your custom script comes last -->
-    <script src="script.js"></script>
-    <div class="container" style="margin-bottom: 1.5rem;">
-      <nav>
-        <!-- <div class="nav-items"> -->
-        <ul class="menu">
-          <li><a href="#">Traffic Tracking</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <!-- </div> -->
-        <!-- todo: search bar -->
-        <div class="search-bar" id="basic-bar">
-          <form action="">
-            <input
-              class="typeahead"
-              id = "pac-input"
-              type="text"
-              placeholder="Enter a City Name">
-          </form>
-        </div>
-      </nav>
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <ul>
+                <a href="index.html">Home</a>
+               <a href="about.html">About Us</a>
+               <a href="support.html">Support</a>
+               <a href="contact.html">Contact</a>
+            </ul>
+        </nav>   
     </div>
-  </head>
-  <body>
+    <header>
+        <h1>SydNav: Your Ultimate Traffic Companion</h1>
+        <p>Navigate Sydney's Roads Like Never Before</p>
+        <a href="#basic-bar" class="button">Start navigating</a>
+    </header>    
     <div class="container">
-      <style>
-        /* Set the size of the map */
-        #map {
-            height: 600px;
-            width: 80%;
-            margin: 0 auto;
-            border: 1px solid #000;
-            border-radius: 25px;
-        }
-      </style>
-      <div id="map"></div>
-
-      <script async>
-          // Initialize and display the map
-          function initMap() {
-            var geocoder = new google.maps.Geocoder();
-            var input = document.getElementById('pac-input');
-            map = new google.maps.Map(document.getElementById('map'), {
-              center: {lat: 0, lng: 0},
-              zoom: 12
-            });
-            var city = "Sydney";
-            input.addEventListener("keydown", function (event) {
-                // detect event key
-              if (event.keyCode == 13) {
-                city = input.value;
-                input.value = "";
-                if (city == "") {
-                  input = "Sydney";
-                }
-                geocoder.geocode({'address': city}, function(results, status) {
-                  if (status === 'OK') {
-                    map.setCenter(results[0].geometry.location);
-                  } else {
-                    alert('Geocode was not successful for the following reason: ' + status);
-                  }
-                });
-              }
-            });
-
-            // Add the TrafficLayer to the map to display traffic information
-            var trafficLayer = new google.maps.TrafficLayer();
-            trafficLayer.setMap(map);
-          }
-      </script>
-      <!-- Load the Google Maps JavaScript API with your API key -->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvzkIdApps-fFm5O8a3Xn0jrxp1ctZD54&callback=initMap" async defer></script>
+        <p><img src="img_folder/img_1.jpg" alt="About1_img"> Welcome to SydNav, where we revolutionize the way you navigate Sydney's bustling streets. Say goodbye to traffic jams and hello to smooth, stress-free journeys.</p>
+        <p><img src="img_folder/img_2.jpg" alt="About2_img">  With SydNav, you have the power to outsmart traffic, plan your routes intelligently, and reach your destination faster than ever before. Our cutting-edge technology provides real-time updates, ensuring you're always one step ahead of congestion.</p>
+        <p><img src="/img_folder/img_3.jpg" alt="About3_img"> Whether you're commuting to work, exploring the city, or embarking on a road trip, SydNav is your ultimate traffic companion. Join thousands of satisfied users and experience the freedom of the open road with SydNav by your side.</p>
     </div>
-  </body>
+
+    <!-- todo: search bar -->
+    <div class="search-bar" id="basic-bar">
+        <input class="typeahead" type="text" placeholder="Suburbs of Sydney" />
+    </div>
+
+    <!-- todo: header -->
+    <div class="header">Status</div>
+
+    <!-- todo: hero section -->
+    <div class="hero">
+        <div class="hero-img-container">
+            <img class="img-card" src="img_folder/black&white_sydney.jpeg" alt="" />
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <p>Contact us: <a href="mailto:SydNav@outlook.com">info@sydnav.com</a></p>
+                <p>Phone: +61 04xx xxx xxx</p>
+            </div>
+        </div>
+                
+        <hr>        
+        <div class="copyright">
+            <p>&copy; 2024 SydNav. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
