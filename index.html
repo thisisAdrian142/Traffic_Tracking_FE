@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      /* Set the size of the map */
+      #map {
+          height: 400px;
+          width: 100%;
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Traffic Tracking</title>
@@ -35,21 +42,28 @@
           </form>
         </div>
       </nav>
+      <h1>City Traffic</h1>
+      <div id="map"></div>
 
-      <!-- todo: header -->
-      <div class="header">Status</div>
+      <script>
+          // Initialize and display the map
+          function initMap() {
+              // Specify coordinates for the center of the city
+              var cityCenter = { lat: -33.8688, lng: 151.2093 };
 
-      <!-- todo: hero section -->
-      <div class="hero">
-        <div class="hero-img-container">
-          <img
-            class="img-card"
-            src="img_folder/black&white_sydney.jpeg"
-            alt=""
-          />
-        </div>
-      </div>
+              // Create a new map object centered on the city
+              var map = new google.maps.Map(document.getElementById('map'), {
+                  center: cityCenter,
+                  zoom: 12  // Adjust the zoom level as needed
+              });
+
+              // Add the TrafficLayer to the map to display traffic information
+              var trafficLayer = new google.maps.TrafficLayer();
+              trafficLayer.setMap(map);
+          }
+      </script>
+      <!-- Load the Google Maps JavaScript API with your API key -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvzkIdApps-fFm5O8a3Xn0jrxp1ctZD54&callback=initMap" async defer></script>
     </div>
-    <!-- <script src="/script.js"></script> -->
   </body>
 </html>
