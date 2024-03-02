@@ -25,7 +25,7 @@ nav {
 }
 
 .menu {
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;;
     font-weight: 500;
     display: flex;
     width: 65%;
@@ -35,17 +35,26 @@ nav {
 
 .menu li{
     margin-left: 2rem;
+    position: relative;
 }
 
 .menu li a {
-    font-size: 15px;
+    padding: 0.33vw 0.7vw;
+    margin: 1vw;
+    font-size: 1.3rem;
+    font-weight: 3rem;
     color: rgb(255, 255, 255);
     text-decoration: none;
     transition: .3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color .5s;
 }
 
 .menu li a:hover {
     color: #F05429;
+
 }
 
 .search-bar input{
