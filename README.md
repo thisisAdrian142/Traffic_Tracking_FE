@@ -8,22 +8,27 @@
 
 ## General info 🧠
 
-This project will apply computer science concepts to observe and provide information of an area's traffic status.
+This project application observes and analyzes traffic patterns, providing live and past data to help UNSW and Local Council implement changes to areas within the suburb.
 
 ## Technologies 🚀
 
-This web application will be builted with both Front-end and Back-end
+This application is built with both Front-end and Back-end.
 
-Front-end:
+### Front-end:
 
 - HTML
 - CSS
 - Javascript
 
-Back-end:
+#### Purpose: Creating an interactive, friendly user interface webpage.
 
-- Python
+### Back-end:
+
+- Javascript
+- APIs
+
+#### Purpose: Using the Google Maps API to provide users a visual representation of all the routes, current traffic status of different areas.
 
 ## Future 🔮
 
-Will extend the scale of the application.
+Will extend the scale of the application to whole state, and country.
