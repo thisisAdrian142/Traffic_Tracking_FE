@@ -198,7 +198,7 @@ nav {
     height: 50vh;
     width: 100%;
     margin: 0 auto;
-    background: url(/img_folder/moving_car.gif) no-repeat center center;
+    background: url(img_folder/moving_car.gif) no-repeat center center;
     background-size: cover;
     border-radius: 0;
     position: relative;
