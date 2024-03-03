@@ -9,9 +9,9 @@
     <div class="container" style="margin-bottom: 1.5rem">
       <nav>
         <ul class="menu">
-          <li><a href="#">Traffic Tracking</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="index.html">Traffic Tracking</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="search-bar" id="basic-bar">
           <form action="">
@@ -19,7 +19,8 @@
               class="typeahead"
               id="pac-input"
               type="text"
-              placeholder="Enter a City Name">
+              placeholder="Enter a City Name"
+            />
           </form>
         </div>
       </nav>
@@ -62,8 +63,7 @@
                   map.setCenter(results[0].geometry.location);
                 } else {
                   alert(
-                    "The location doesn't exist, please try again!" +
-                      status
+                    "The location doesn't exist, please try again!" + status
                   );
                 }
               });
