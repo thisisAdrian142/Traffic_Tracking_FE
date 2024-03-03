@@ -194,3 +194,7 @@ nav {
     text-decoration: none;
 }
 
+/** about project page */
+.img-gif-background {
+    background: url(/img_folder/moving_car.gif);
+}
