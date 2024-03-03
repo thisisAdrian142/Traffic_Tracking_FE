@@ -8,22 +8,18 @@
 
     <div class="container" style="margin-bottom: 1.5rem">
       <nav>
-        <!-- <div class="nav-items"> -->
         <ul class="menu">
           <li><a href="#">Traffic Tracking</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <!-- </div> -->
-        <!-- todo: search bar -->
         <div class="search-bar" id="basic-bar">
           <form action="">
             <input
               class="typeahead"
               id="pac-input"
               type="text"
-              placeholder="Enter a City Name"
-            />
+              placeholder="Enter a City Name">
           </form>
         </div>
       </nav>
@@ -66,7 +62,7 @@
                   map.setCenter(results[0].geometry.location);
                 } else {
                   alert(
-                    "Geocode was not successful for the following reason: " +
+                    "The location doesn't exist, please try again!" +
                       status
                   );
                 }
@@ -79,11 +75,9 @@
           trafficLayer.setMap(map);
         }
       </script>
-      <!-- Load the Google Maps JavaScript API with your API key -->
       <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvzkIdApps-fFm5O8a3Xn0jrxp1ctZD54&callback=initMap"
         async
-        defer
       ></script>
     </div>
   </body>

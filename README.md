@@ -25,6 +25,7 @@ This application is built with both Front-end and Back-end.
 ### Back-end:
 
 - Javascript
+- Python
 - APIs
 
 #### Purpose: Using the Google Maps API to provide users a visual representation of all the routes, current traffic status of different areas.
