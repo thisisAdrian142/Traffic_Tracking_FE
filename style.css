@@ -196,12 +196,50 @@ nav {
 }
 .img-gif-background {
     height: 50vh;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     background: url(/img_folder/moving_car.gif) no-repeat center center;
     background-size: cover;
-    border-radius: 0 0 25px 25px;
-    position: absolute;
+    border-radius: 0;
+    position: relative;
     left: 0;
     right: 0;
+    z-index: 1;
+
+}
+
+.about-container {
+    max-width: 800px;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 0 0 25px 25px;
+    margin-top: -4rem;
+    z-index: 10;
+    max-width: 55rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 0.1rem;
+}
+
+.about-container {
+    width: 55rem;
+    background-color: rgb(21, 20, 20);
+}
+
+.about-container-header {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.about-container-text {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    text-align: justify;
+    font-size: 1.5rem;
+    line-height: 3rem;
 }
